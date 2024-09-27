@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Odds</title> <!-- Change title to VIP Odds or VVIP Odds for respective pages -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Free Odds</h2> <!-- Change header to VIP Odds or VVIP Odds for respective pages -->
+        <div class="loading-spinner" id="loadingSpinner"></div>
+        <table id="oddsTable">
+            <thead>
+                <tr>
+                    <th>League</th>
+                    <th>Home Team</th>
+                    <th>Away Team</th>
+                    <th>Prediction</th>
+                    <th>%</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="text" class="league-input" placeholder="Enter League"></td>
+                    <td><input type="text" class="team-input home" placeholder="Enter Home Team"></td>
+                    <td><input type="text" class="team-input away" placeholder="Enter Away Team"></td>
+                    <td><input type="text" class="prediction-input" placeholder="Prediction"></td>
+                    <td><input type="text" class="percent-input" placeholder="%"></td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+        <button id="postBtn">Post</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
