@@ -7,7 +7,8 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background: #f4f4f4;
+    background: url('assets/background-image.jpg') no-repeat center center fixed;
+    background-size: cover;
     color: #333;
     line-height: 1.6;
 }
@@ -19,22 +20,18 @@ body {
     margin: 0 auto;
 }
 
-h1, h2 {
-    color: #0072ff;
-    margin-bottom: 20px;
-}
-
 /* Button Styles */
 .btn {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 15px 25px;
     background: #ff4081;
     color: white;
     text-decoration: none;
-    margin: 5px;
-    border-radius: 5px;
+    margin: 10px;
+    border-radius: 50px;
     transition: background 0.3s, transform 0.2s;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
 }
 
 .btn:hover {
@@ -42,120 +39,63 @@ h1, h2 {
     transform: translateY(-2px);
 }
 
-/* Hero Section */
-.hero {
-    background: linear-gradient(to right, #00c6ff, #0072ff);
-    color: white;
+.drawer-btn {
+    width: 200px;
     text-align: center;
-    padding: 50px 0;
 }
 
-.hero img {
-    max-width: 100%;
-    height: auto;
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 100px 0;
+    color: white;
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
     margin-top: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 .hero p {
     font-size: 1.2rem;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 /* Footer */
 footer {
     text-align: center;
     padding: 20px 0;
-    background: #0072ff;
+    background: rgba(0, 0, 0, 0.6);
     color: white;
-    margin-top: 20px;
 }
 
-footer p {
-    margin: 0;
-    font-size: 0.9rem;
-}
-
-/* Login Form */
-.login-container {
-    max-width: 400px;
-    margin: 50px auto;
-    background: white;
-    padding: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+/* Current Time */
+.current-time {
+    font-size: 1.5rem;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
     border-radius: 8px;
-}
-
-label {
-    margin-bottom: 10px;
-    display: block;
-    font-weight: bold;
-}
-
-input[type="text"], input[type="password"], input[type="number"] {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-button {
-    width: 100%;
-    padding: 10px;
-    background: #0072ff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.3s, transform 0.2s;
-}
-
-button:hover {
-    background: #005bb5;
-    transform: translateY(-2px);
-}
-
-/* Table Styles */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-}
-
-th, td {
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: center;
-    font-size: 0.9rem;
-}
-
-th {
-    background-color: #0072ff;
-    color: white;
-}
-
-input[type="text"] {
-    width: 90%;
-    padding: 5px;
-    font-size: 0.9rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #ff4081;
 }
 
 /* Loading Spinner */
 .loading-spinner {
-    display: block;
-    width: 50px;
-    height: 50px;
-    border: 5px solid rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70px;
+    height: 70px;
+    border: 8px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     border-top-color: #0072ff;
     animation: spin 1s ease infinite;
-    margin: 20px auto;
+    display: block;
 }
 
 @keyframes spin {
@@ -169,105 +109,12 @@ input[type="text"] {
         width: 95%;
     }
 
-    h1, h2 {
-        font-size: 1.5rem;
-    }
-
     .btn {
         width: 100%;
         text-align: center;
     }
 
-    table {
-        font-size: 0.8rem;
-    }
-
-    th, td {
-        padding: 8px;
-    }
-
-    input[type="text"] {
-        font-size: 0.8rem;
+    .hero p {
+        font-size: 1rem;
     }
 }
-
-/* Specific Styles for Free Odds, VIP Odds, VVIP Odds Pages */
-.odds-page-header {
-    background-color: #0072ff;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    margin-bottom: 20px;
-}
-
-.odds-page-header h2 {
-    font-size: 1.8rem;
-    margin: 0;
-}
-
-/* Form for Table Editing */
-input[type="text"] {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border-radius: 4px;
-    border: 1px solid #ddd;
-}
-
-.suggestion-box {
-    background-color: white;
-    border: 1px solid #ccc;
-    max-height: 150px;
-    overflow-y: auto;
-    position: absolute;
-    z-index: 1000;
-    width: 100%;
-    display: none;
-}
-
-.suggestion-item {
-    padding: 10px;
-    cursor: pointer;
-}
-
-.suggestion-item:hover {
-    background-color: #f0f0f0;
-}
-
-/* Post Button */
-#postBtn {
-    background-color: #ff4081;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    margin-top: 10px;
-}
-
-#postBtn:hover {
-    background-color: #e91e63;
-}
-
-/* Sophisticated Look for Tables */
-table {
-    border: 2px solid #0072ff;
-    border-radius: 5px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-td, th {
-    padding: 15px;
-    font-size: 1rem;
-}
-
-tr:nth-child(even) {
-    background-color: #f4f4f4;
-}
-
-tr:hover {
-    background-color: #f1f1f1;
-  }
-  
